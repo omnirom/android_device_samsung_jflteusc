@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, device/samsung/jflteatt/omni_jflteatt.mk)
 
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/jflter970/jflter970-vendor.mk)
-
-# Disable MSB for GPS
-NEEDS_GPS_MSB_DISABLED := true
-
-# Inherit from jf-common
-$(call inherit-product, device/samsung/jf-common/jf-common.mk)
+PRODUCT_NAME := aosp_jflteusc
